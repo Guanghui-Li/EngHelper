@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">EngHelper</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="username">Username:</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="short_sentence">Short Sentences</string>
+    <string name="short_paragraph">Short Paragraphs</string>
+    <string name="vocabulary">Vocabulary</string>
+    <string name="title_activity_my_info_">MyInfo_Activity</string>
+    <string name="sentence">Sentence</string>
+    <string name="paragraph">Paragraph</string>
+    <string name="title_home">Home</string>
+    <string name="chinese">Chinese</string>
+    <string name="english">English</string>
+    <string name="vocabulary_column">Vocabulary:</string>
+    <string name="hint">What do you think it means?</string>
+    <string name="check">Check</string>
+    <string name="you_column">You:</string>
+    <string name="back">Back</string>
+    <string name="next">Continue</string>
+</resources>
