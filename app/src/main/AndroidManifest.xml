@@ -19,7 +19,8 @@
         <activity
             android:name=".MyInfo_Activity"
             android:label="@string/title_activity_my_info_" />
-        <activity android:name=".Vocabulary.VocabularyActivity"></activity>
+        <activity android:name=".Vocabulary.VocabularyActivity" />
+        <activity android:name=".Vocabulary.VocabularyDetailActivity"></activity>
     </application>
 
 </manifest>

@@ -10,13 +10,16 @@
         android:id="@+id/trVocabID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.156"
-        tools:layout_editor_absoluteX="16dp">
+        app:layout_constraintVertical_bias="0.156">
 
         <TextView
             android:id="@+id/tvVocabLabelID"
@@ -43,13 +46,16 @@
         android:id="@+id/trInputID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/trVocabID"
-        app:layout_constraintVertical_bias="0.121"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintVertical_bias="0.121">
 
         <EditText
             android:id="@+id/etDefinitionID"
@@ -64,13 +70,16 @@
         android:id="@+id/trInputTvID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/trVocabID"
-        app:layout_constraintVertical_bias="0.117"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintVertical_bias="0.117">
 
         <TextView
             android:id="@+id/tvInputLabelID"
@@ -97,16 +106,56 @@
     </TableRow>
 
     <TableRow
+        android:id="@+id/trAnswerID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trInputTvID"
+        app:layout_constraintVertical_bias="0.166">
+
+        <TextView
+            android:id="@+id/tvAnswerLabelID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:text="@string/answer_column"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvAnswerID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:text="Your Answer" />
+    </TableRow>
+
+    <TableRow
         android:id="@+id/trCheckID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/trInputID"
-        app:layout_constraintVertical_bias="0.211"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintVertical_bias="0.309">
 
         <Button
             android:id="@+id/btnCheckID"
@@ -121,14 +170,18 @@
         android:id="@+id/trNavigateID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
+        android:padding="15dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/trInputTvID"
-        app:layout_constraintVertical_bias="0.244"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trAnswerID"
+        app:layout_constraintVertical_bias="1.0">
 
         <Button
             android:id="@+id/btnBackID"

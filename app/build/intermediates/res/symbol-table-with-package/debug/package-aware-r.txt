@@ -1291,6 +1291,7 @@ id title_template
 id top
 id topPanel
 id touch_outside
+id trAnswerID
 id trCheckID
 id trInputID
 id trInputTvID
@@ -1301,6 +1302,8 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvAnswerID
+id tvAnswerLabelID
 id tvGreetingID
 id tvInputID
 id tvInputLabelID
@@ -1369,6 +1372,7 @@ layout abc_tooltip
 layout activity_main
 layout activity_my_info_
 layout activity_vocabulary
+layout activity_vocabulary_detail
 layout cardview_vocab
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1451,6 +1455,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string answer_column
 string app_name
 string appbar_scrolling_view_behavior
 string back

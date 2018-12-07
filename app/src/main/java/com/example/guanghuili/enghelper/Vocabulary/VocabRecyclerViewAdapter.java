@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.guanghuili.enghelper.AppUser;
 import com.example.guanghuili.enghelper.MainActivity;
@@ -52,6 +53,8 @@ public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecycler
     //***Popup_vocab
     private TextView tvVocabulary;
     private TextView tvInputLabel;
+    private TextView tvAnswerLabel;
+    private TextView tvAnswer;
     private EditText etInput;
     private TextView tvInput;
     private Button btnCheck;
@@ -62,6 +65,7 @@ public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecycler
     private TableRow trInputTv;
     private TableRow trCheck;
     private TableRow trNavigate;
+    private TableRow trAnswer;
 
 
 
@@ -149,21 +153,28 @@ public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecycler
         }
     }
 
-    private void createLoginDialog(Vocabulary vocabulary){
+    private void createLoginDialog(final Vocabulary vocabulary){
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         dialogBuilder = new AlertDialog.Builder(context);
         View view = inflater.inflate(R.layout.popup_vocab, null);
+
         tvVocabulary = view.findViewById(R.id.tvVocabID);
         etInput = view.findViewById(R.id.etDefinitionID);
+        tvInputLabel = view.findViewById(R.id.tvInputLabelID);
         tvInput = view.findViewById(R.id.tvInputID);
+
         btnCheck = view.findViewById(R.id.btnCheckID);
+
+        tvAnswerLabel = view.findViewById(R.id.tvAnswerLabelID);
+        tvAnswer = view.findViewById(R.id.tvAnswerID);
+
         btnBack = view.findViewById(R.id.btnBackID);
         btnContinue = view.findViewById(R.id.btnContinueID);
-        tvInputLabel = view.findViewById(R.id.tvInputLabelID);
 
         trVocab = view.findViewById(R.id.trVocabID);
         trInput = view.findViewById(R.id.trInputID);
         trInputTv = view.findViewById(R.id.trInputTvID);
+        trAnswer = view.findViewById(R.id.trAnswerID);
         trCheck = view.findViewById(R.id.trCheckID);
         trNavigate = view.findViewById(R.id.trNavigateID);
 
@@ -176,13 +187,31 @@ public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecycler
                     trInput.setVisibility(View.INVISIBLE);
                     tvInput.setText(etInput.getText().toString());
                     trInputTv.setVisibility(View.VISIBLE);
+                    tvAnswer.setText(vocabulary.getDefinitionList().get(0));
+                    trAnswer.setVisibility(View.VISIBLE);
                     trNavigate.setVisibility(View.VISIBLE);
-
+                }
+                else{
+                    Toast.makeText(context, "Type in your definition", Toast.LENGTH_SHORT).show();
                 }
             }
         });
         dialogBuilder.setView(view);
         alertDialog = dialogBuilder.create();
         alertDialog.show();
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+            }
+        });
+
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 }

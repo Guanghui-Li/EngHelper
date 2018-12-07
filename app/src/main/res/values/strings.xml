@@ -19,4 +19,5 @@
     <string name="you_column">You:</string>
     <string name="back">Back</string>
     <string name="next">Continue</string>
+    <string name="answer_column">Answer:</string>
 </resources>
