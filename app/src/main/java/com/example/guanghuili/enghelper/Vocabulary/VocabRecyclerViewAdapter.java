@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.example.guanghuili.enghelper.AppUser;
 import com.example.guanghuili.enghelper.MainActivity;
 import com.example.guanghuili.enghelper.R;
+import com.example.guanghuili.enghelper.UserManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,6 +30,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecyclerViewAdapter.ViewHolder>{
@@ -42,13 +44,10 @@ public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecycler
     private AppUser appUser;
 
 
-    private FirebaseUser user;
     private FirebaseDatabase database;
-    private DatabaseReference refSignUpAppUsers;
+    private DatabaseReference refSignInAppUsers;
     private DatabaseReference refVocabulary;
     private DatabaseReference databaseReference;
-    private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListener;
 
     //***Popup_vocab
     private TextView tvVocabulary;
@@ -69,42 +68,16 @@ public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecycler
 
 
 
-
-
-
-
-    public VocabRecyclerViewAdapter(Context context, ArrayList<Vocabulary>vocabularyList){
+    public VocabRecyclerViewAdapter(Context context, ArrayList<Vocabulary>vocabularyList, AppUser appUser, String ref){
         this.vocabularyList = vocabularyList;
         this.context = context;
+        this.appUser = appUser;
+        database = FirebaseDatabase.getInstance();
+        this.refVocabulary = database.getReference("vocabulary").child(ref);
+        Log.d("checking",refVocabulary.toString());
         //clickSound = MediaAppUser.create(context, R.raw.click);
 
-        mAuth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance();
-        refSignUpAppUsers = database.getReference("Signed Up AppUsers");
-        refVocabulary = database.getReference("vocabulary");
 
-        mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                user = mAuth.getCurrentUser();
-            }
-        });
-
-        refSignUpAppUsers.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                user = mAuth.getCurrentUser();
-                for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
-                    if(dataSnapshot1.getValue(AppUser.class).getUsername().equals(user.getDisplayName())){
-                        appUser = dataSnapshot1.getValue(AppUser.class);
-                    }
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
     }
 
     @NonNull
@@ -183,6 +156,21 @@ public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecycler
             @Override
             public void onClick(View view) {
                 if(etInput.getText().toString().length() > 0){
+
+                    //*****************************
+                    //add to the user's guess list
+                    Guess guess = new Guess(etInput.getText().toString());
+                    appUser.putGuessMap(vocabulary.getName(),guess);
+
+                    //update in database
+                    refSignInAppUsers = database.getReference("Signed Up Users").child(appUser.getUsername());
+                    refSignInAppUsers.setValue(appUser);
+
+                    //guess.setAppUser(appUser);
+                    vocabulary.getGuessList().add(guess);
+                    refVocabulary.child(vocabulary.getName()).setValue(vocabulary);
+
+                    //*****************************
                     trCheck.setVisibility(View.INVISIBLE);
                     trInput.setVisibility(View.INVISIBLE);
                     tvInput.setText(etInput.getText().toString());
@@ -210,7 +198,9 @@ public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecycler
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(context,VocabularyDetailActivity.class);
+                intent.putExtra("vocabulary", vocabulary);
+                context.startActivity(intent);
             }
         });
     }

@@ -1,14 +1,17 @@
 package com.example.guanghuili.enghelper.Vocabulary;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Vocabulary {
+public class Vocabulary implements Serializable {
     private String name;
     private String definition;
     private String dateCreated;
+    private Guess guess;
+    private List<Guess> guessList = new ArrayList<>();
 
 
     private List<String> definitionList = new ArrayList<>();
@@ -43,11 +46,23 @@ public class Vocabulary {
         return dateCreated;
     }
 
-    public void setdateCreated(String dateCreated) {
-        dateCreated = dateCreated;
-    }
-
     public List<String> getDefinitionList() {
         return definitionList;
+    }
+
+    public Guess getGuess() {
+        return guess;
+    }
+
+    public void setGuess(Guess guess) {
+        this.guess = guess;
+    }
+
+    public List<Guess> getGuessList() {
+        return guessList;
+    }
+
+    public void setGuessList(List<Guess> guessList) {
+        this.guessList = guessList;
     }
 }

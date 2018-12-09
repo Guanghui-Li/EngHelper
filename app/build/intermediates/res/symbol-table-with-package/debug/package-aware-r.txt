@@ -1122,6 +1122,7 @@ id btnSignupXMLID
 id btnVocabID
 id buttonPanel
 id cancel_action
+id cardviewCommentID
 id cardviewLayoutID
 id center
 id center_horizontal
@@ -1201,7 +1202,6 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
-id navigation
 id navigation_Vocabulary
 id navigation_header_container
 id navigation_paragraph
@@ -1223,10 +1223,10 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
-id recyclerView
 id right
 id right_icon
 id right_side
+id rvCommentID
 id rvVocabID
 id save_image_matrix
 id save_non_transition_alpha
@@ -1236,6 +1236,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scrollView2
 id scrollable
 id search_badge
 id search_bar
@@ -1304,13 +1305,18 @@ id transition_scene_layoutid_cache
 id transition_transform
 id tvAnswerID
 id tvAnswerLabelID
+id tvDateID
+id tvDefinitionID
 id tvGreetingID
 id tvInputID
 id tvInputLabelID
+id tvUserDefinitionID
+id tvUsernameID
 id tvVocabDateID
 id tvVocabID
 id tvVocabLabelID
 id tvVocabNameID
+id tvVocabularyID
 id uniform
 id unlabeled
 id up
@@ -1370,10 +1376,10 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
-layout activity_my_info_
 layout activity_vocabulary
 layout activity_vocabulary_detail
 layout cardview_vocab
+layout cardview_vocab_comment
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1412,7 +1418,6 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout signup
 layout support_simple_spinner_dropdown_item
-layout test
 menu navigation
 mipmap ic_launcher
 mipmap ic_launcher_round

@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.guanghuili.enghelper.Vocabulary.Guess;
 import com.example.guanghuili.enghelper.Vocabulary.Vocabulary;
 import com.example.guanghuili.enghelper.Vocabulary.VocabularyActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -155,18 +156,50 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        refSignUpUsers.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                appUser = dataSnapshot.child(user.getDisplayName()).getValue(AppUser.class);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         refUsername.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot username : dataSnapshot.getChildren()){
                     userManager.getUsernameList().add(username.getValue(String.class));
                 }
+                /*
+                Log.d("checking",String.valueOf(userManager.getuserList().size()));
+                user = mAuth.getCurrentUser();
+
+                DatabaseReference ref = database.getReference("vocabulary").child("English");
+                Vocabulary vocab = new Vocabulary("big","大");
+                ref.child(vocab.getName()).setValue(vocab);
+                Guess guess = new Guess("大");
+                appUser.putGuessMap(vocab.getName(),guess);
+                DatabaseReference ref1 = database.getReference("Signed Up Users").child(appUser.getUsername());
+                ref1.setValue(appUser);
+                guess.setAppUser(appUser);
+
+                vocab.getGuessList().add(guess);
+                */
+
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
+
+
+        //******test******
+
     }
 
     @Override
@@ -283,4 +316,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 }

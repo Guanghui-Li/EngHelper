@@ -36,7 +36,7 @@ public class VocabularyActivity extends AppCompatActivity {
     private Button btnEnglish;
 
     private FirebaseDatabase database;
-    private DatabaseReference refSignUpPlayers;
+    private DatabaseReference refSignUpUsers;
     private DatabaseReference refVocabulary;
     private DatabaseReference refVocabularyCN;
     private DatabaseReference refVocabularyEN;
@@ -83,10 +83,39 @@ public class VocabularyActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
-        refSignUpPlayers = database.getReference("Signed Up Players");
+        refSignUpUsers = database.getReference("Signed Up Users");
         refVocabulary = database.getReference("vocabulary");
         refVocabularyCN = refVocabulary.child("Chinese");
         refVocabularyEN = refVocabulary.child("English");
+
+        mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                user = mAuth.getCurrentUser();
+            }
+        });
+
+
+        refSignUpUsers.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                user = mAuth.getCurrentUser();
+                Log.d("checking","checking");
+
+                for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
+                    if(user != null) {//(double check)when user sign up in the mainActivity, this listener will be called, but the activity has not been called, so there is no user
+                        if (dataSnapshot1.getValue(AppUser.class).getUsername().equals(user.getDisplayName())) {
+                            appUser = dataSnapshot1.getValue(AppUser.class);
+                            break;
+                        }
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
 
         refVocabularyCN.addValueEventListener(new ValueEventListener() {
@@ -125,46 +154,17 @@ public class VocabularyActivity extends AppCompatActivity {
         });
 
 
-
-        mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                user = mAuth.getCurrentUser();
-            }
-        });
-
-
-        refSignUpPlayers.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                user = mAuth.getCurrentUser();
-                for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
-                    if(user != null) {//(double check)when user sign up in the mainActivity, this listener will be called, but the activity has not been called, so there is no user
-                        if (dataSnapshot1.getValue(AppUser.class).getUsername().equals(user.getDisplayName())) {
-                            appUser = dataSnapshot1.getValue(AppUser.class);
-                        }
-                    }
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-
     }
 
 
     public void initiateVocabRecyclerViewCN(){
-        VocabRecyclerViewAdapter = new VocabRecyclerViewAdapter(VocabularyActivity.this, vocabularyManagerCN.getVocabularyList());
+        VocabRecyclerViewAdapter = new VocabRecyclerViewAdapter(VocabularyActivity.this, vocabularyManagerCN.getVocabularyList(), appUser, "Chinese");
         recyclerView.setAdapter(VocabRecyclerViewAdapter);
         VocabRecyclerViewAdapter.notifyDataSetChanged();
     }
 
     public void initiateVocabRecyclerViewEN(){
-        Log.d("Clicked", "recyclerView");
-        VocabRecyclerViewAdapter = new VocabRecyclerViewAdapter(VocabularyActivity.this, vocabularyManagerEN.getVocabularyList());
+        VocabRecyclerViewAdapter = new VocabRecyclerViewAdapter(VocabularyActivity.this, vocabularyManagerEN.getVocabularyList(), appUser, "English");
         recyclerView.setAdapter(VocabRecyclerViewAdapter);
         VocabRecyclerViewAdapter.notifyDataSetChanged();
     }
