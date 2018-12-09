@@ -41,8 +41,13 @@ public class AppUser implements Serializable {
         return guessMap;
     }
 
-    public void putGuessMap(String vocabulary, Guess guess){
-        guessMap.put(vocabulary,guess);
+    public Guess makeGuess(String vocabulary, String g){
+        Guess guess = new Guess(g, new AppUser());
+        this.guessMap.put(vocabulary, guess);
+        Guess guess1 = new Guess(g, this);
+        //this.guessMap.put(vocabulary, guess1);
+
+        return guess1;
     }
 
 }

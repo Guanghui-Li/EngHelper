@@ -16,8 +16,9 @@ public class Guess implements Serializable {
         this.dateCreated = df.format(new Date());
     }
 
-    public Guess(String guess){
+    public Guess(String guess, AppUser appUser){
         this.guess = guess;
+        this.appUser = appUser;
         SimpleDateFormat df = new SimpleDateFormat("MM-dd-yyyy");
         this.dateCreated = df.format(new Date());
     }

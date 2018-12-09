@@ -159,14 +159,14 @@ public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecycler
 
                     //*****************************
                     //add to the user's guess list
-                    Guess guess = new Guess(etInput.getText().toString());
-                    appUser.putGuessMap(vocabulary.getName(),guess);
+
+
+                    Guess guess = appUser.makeGuess(vocabulary.getName(),etInput.getText().toString());
 
                     //update in database
                     refSignInAppUsers = database.getReference("Signed Up Users").child(appUser.getUsername());
                     refSignInAppUsers.setValue(appUser);
 
-                    //guess.setAppUser(appUser);
                     vocabulary.getGuessList().add(guess);
                     refVocabulary.child(vocabulary.getName()).setValue(vocabulary);
 
