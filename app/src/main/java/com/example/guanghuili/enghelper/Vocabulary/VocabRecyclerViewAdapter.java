@@ -122,11 +122,16 @@ public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecycler
             //clickSound.start();
             int position = getAdapterPosition();
             vocabulary = vocabularyList.get(position);
-            createLoginDialog(vocabulary);
+            if(checkBypass(vocabulary.getName())){
+                bypass(vocabulary);
+            }
+            else{
+                createCheckingDialog(vocabulary);
+            }
         }
     }
 
-    private void createLoginDialog(final Vocabulary vocabulary){
+    private void createCheckingDialog(final Vocabulary vocabulary){
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         dialogBuilder = new AlertDialog.Builder(context);
         View view = inflater.inflate(R.layout.popup_vocab, null);
@@ -203,5 +208,20 @@ public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecycler
                 context.startActivity(intent);
             }
         });
+    }
+
+    public boolean checkBypass(String vocabName){
+        for(String key : appUser.getGuessMap().keySet()){
+            if(key.equals(vocabName)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void bypass(Vocabulary vocabulary){
+        Intent intent = new Intent(context,VocabularyDetailActivity.class);
+        intent.putExtra("vocabulary",vocabulary);
+        context.startActivity(intent);
     }
 }

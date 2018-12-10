@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.2.1"
-    timestamp="1544366966962"
+    timestamp="1544417192635"
     token="-8746263763605099576"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="225" />
+        duration="254" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="19" />
+        duration="33" />
     <task
         name="verifier"
-        duration="9" />
+        duration="2" />
 
     <artifact
         location="D:\Android Studio\AndroidStudioProjects\Hobby\EngHelper\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
@@ -30,13 +30,13 @@
 
     <build
         build-mode="FULL"
-        timestamp="1544364927748"
+        timestamp="1544414430324"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="D:\Android Studio\AndroidStudioProjects\Hobby\EngHelper\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="D:\Android Studio\AndroidStudioProjects\Hobby\EngHelper\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Android Studio\AndroidStudioProjects\Hobby\EngHelper\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="D:\Android Studio\AndroidStudioProjects\Hobby\EngHelper\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="D:\Android Studio\AndroidStudioProjects\Hobby\EngHelper\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
@@ -74,17 +74,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="FIELD_TYPE_CHANGE"
-        timestamp="1544366888898"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="D:\Android Studio\AndroidStudioProjects\Hobby\EngHelper\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1544366966962"
+        timestamp="1544417192635"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\Android Studio\AndroidStudioProjects\Hobby\EngHelper\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
