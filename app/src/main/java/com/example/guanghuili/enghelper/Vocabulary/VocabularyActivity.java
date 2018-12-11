@@ -25,6 +25,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class VocabularyActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
@@ -123,7 +126,10 @@ public class VocabularyActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 vocabularyManagerCN.getVocabularyList().clear();
                 for(DataSnapshot roomSnapshot : dataSnapshot.getChildren()){
-                    vocabularyManagerCN.getVocabularyList().add(roomSnapshot.getValue(Vocabulary.class));
+                    Vocabulary vocabulary = roomSnapshot.getValue(Vocabulary.class);
+                    if(processVocabulary(vocabulary)){
+                        vocabularyManagerCN.getVocabularyList().add(vocabulary);
+                    }
 
                 }
             }
@@ -167,6 +173,47 @@ public class VocabularyActivity extends AppCompatActivity {
         VocabRecyclerViewAdapter = new VocabRecyclerViewAdapter(VocabularyActivity.this, vocabularyManagerEN.getVocabularyList(), appUser, "English");
         recyclerView.setAdapter(VocabRecyclerViewAdapter);
         VocabRecyclerViewAdapter.notifyDataSetChanged();
+    }
+
+    public boolean processVocabulary(Vocabulary vocab){
+        SimpleDateFormat df = new SimpleDateFormat("MM-dd-yyyy");
+        String date = df.format(new Date());
+        String [] dateArray = date.split("-");
+        int monthNow = Integer.parseInt(dateArray[0]);
+        int dayNow = Integer.parseInt(dateArray[1]);
+        int yearNow = Integer.parseInt(dateArray[2]);
+
+        String [] createdDateArray = vocab.getDateCreated().split("-");
+        int monthCreated = Integer.parseInt(createdDateArray[0]);
+        int dayCreated = Integer.parseInt(createdDateArray[1]);
+        int yearCreated = Integer.parseInt(createdDateArray[2]);
+
+        if(yearCreated <= yearNow){
+            if(yearCreated < yearNow){
+                return true;
+            }
+            else{
+                if(monthCreated <= monthNow){
+                    if(monthCreated < monthNow){
+                        return true;
+                    }
+                    else{
+                        if(dayCreated <= dayNow){
+                            return true;
+                        }
+                        else{
+                            return false;
+                        }
+                    }
+                }
+                else{
+                    return false;
+                }
+            }
+        }
+        else{
+            return false;
+        }
     }
 
 }
