@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "576760905515",
+    "firebase_url": "https://enghelper-69789.firebaseio.com",
+    "project_id": "enghelper-69789",
+    "storage_bucket": "enghelper-69789.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576760905515:android:b60352fb00732da3",
+        "android_client_info": {
+          "package_name": "com.example.guanghuili.enghelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576760905515-042g8e1d7pqq694ip255gbhuoihcrkop.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.guanghuili.enghelper",
+            "certificate_hash": "b4f7780169a6c2ab39aec03cbe1679eb964b66ec"
+          }
+        },
+        {
+          "client_id": "576760905515-2br9j26337jvjbf8301gk893327r6ldd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL_PaIWLUXlDOhiUmhnhm6ZqTkMy3lUtE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576760905515-2br9j26337jvjbf8301gk893327r6ldd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

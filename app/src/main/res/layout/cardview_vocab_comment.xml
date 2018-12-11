@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardviewCommentID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:cardBackgroundColor="#DECDB1"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvUserDefinitionID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="casual"
+                android:text="first"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvUsernameID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUserDefinitionID"
+                android:layout_alignParentRight="true"
+                android:fontFamily="casual"
+                android:paddingRight="20dp"
+                android:text="Li" />
+
+            <TextView
+                android:id="@+id/tvDateID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUsernameID"
+                android:layout_alignParentRight="true"
+                android:fontFamily="casual"
+                android:paddingRight="20dp"
+                android:text="12/12/12" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
