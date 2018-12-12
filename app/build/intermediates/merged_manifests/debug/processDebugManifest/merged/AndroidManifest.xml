@@ -39,6 +39,9 @@
         </activity>
         <activity android:name="com.example.guanghuili.enghelper.Vocabulary.VocabularyActivity" />
         <activity android:name="com.example.guanghuili.enghelper.Vocabulary.VocabularyDetailActivity" />
+        <activity android:name="com.example.guanghuili.enghelper.Sentence.SentenceActivity" />
+        <activity android:name="com.example.guanghuili.enghelper.Sentence.SentenceDetailActivity" />
+        <activity android:name="com.example.guanghuili.enghelper.Sentence.SentenceCheckActivity" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

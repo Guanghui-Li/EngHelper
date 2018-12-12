@@ -17,20 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.guanghuili.enghelper.AppUser;
-import com.example.guanghuili.enghelper.MainActivity;
+import com.example.guanghuili.enghelper.Guess;
 import com.example.guanghuili.enghelper.R;
-import com.example.guanghuili.enghelper.UserManager;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class VocabRecyclerViewAdapter extends RecyclerView.Adapter<VocabRecyclerViewAdapter.ViewHolder>{

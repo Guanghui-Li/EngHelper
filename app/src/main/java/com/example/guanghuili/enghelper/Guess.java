@@ -1,4 +1,4 @@
-package com.example.guanghuili.enghelper.Vocabulary;
+package com.example.guanghuili.enghelper;
 
 import com.example.guanghuili.enghelper.AppUser;
 

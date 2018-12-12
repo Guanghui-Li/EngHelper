@@ -12,8 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.guanghuili.enghelper.Vocabulary.Guess;
-import com.example.guanghuili.enghelper.Vocabulary.Vocabulary;
+import com.example.guanghuili.enghelper.Sentence.Sentence;
+import com.example.guanghuili.enghelper.Sentence.SentenceActivity;
 import com.example.guanghuili.enghelper.Vocabulary.VocabularyActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -114,6 +114,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnSentence.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SentenceActivity.class);
+                startActivity(intent);
+            }
+        });
+
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -174,21 +182,21 @@ public class MainActivity extends AppCompatActivity {
                 for(DataSnapshot username : dataSnapshot.getChildren()){
                     userManager.getUsernameList().add(username.getValue(String.class));
                 }
-                /*
+
                 Log.d("checking",String.valueOf(userManager.getuserList().size()));
                 user = mAuth.getCurrentUser();
-
-                DatabaseReference ref = database.getReference("vocabulary").child("English");
-                Vocabulary vocab = new Vocabulary("big","大");
-                ref.child(vocab.getName()).setValue(vocab);
-                Guess guess = new Guess("大");
-                appUser.putGuessMap(vocab.getName(),guess);
+/*
+                DatabaseReference ref = database.getReference("sentence").child("English");
+                Sentence sentence = new Sentence("I am the best", "Everyone should know that you are the best creation in life", "每一个人都应该知道你自己是最完美的生物", "English");
+                Guess guess = appUser.makeGuess(sentence.getHighlight(),"我是最棒的");
                 DatabaseReference ref1 = database.getReference("Signed Up Users").child(appUser.getUsername());
                 ref1.setValue(appUser);
-                guess.setAppUser(appUser);
 
-                vocab.getGuessList().add(guess);
+                sentence.getGuessList().add(guess);
+                ref.child(sentence.getHighlight()).setValue(sentence);
                 */
+
+
 
             }
             @Override

@@ -28,16 +28,20 @@
         "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\f5509a2c0f5fcd63147eeed467b1578c\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
     },
     {
-        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",
-        "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\drawable\\tooltip_frame_light.xml"
+        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sentence_detail.xml.flat",
+        "source": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\src\\main\\res\\layout\\activity_sentence_detail.xml"
+    },
+    {
+        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_default.xml.flat",
         "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\color-v23\\abc_tint_default.xml"
     },
     {
-        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
-        "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
+        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",
+        "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\drawable\\tooltip_frame_light.xml"
     },
     {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_bottom_nav_item_tint.xml.flat",
@@ -126,6 +130,10 @@
     {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\layout_cardview_sentence_comment.xml.flat",
+        "source": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\src\\main\\res\\layout\\cardview_sentence_comment.xml"
     },
     {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_ab_back_material.xml.flat",
@@ -220,16 +228,16 @@
         "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_separator.xml.flat",
-        "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\872efa4e66e777809b186b40760000f7\\res\\layout\\design_navigation_item_separator.xml"
+        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23_abc_control_background_material.xml.flat",
+        "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\drawable-v23\\abc_control_background_material.xml"
     },
     {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_edittext.xml.flat",
         "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\color\\abc_tint_edittext.xml"
     },
     {
-        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23_abc_control_background_material.xml.flat",
-        "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\drawable-v23\\abc_control_background_material.xml"
+        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_separator.xml.flat",
+        "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\872efa4e66e777809b186b40760000f7\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_indicator_material.xml.flat",
@@ -1252,6 +1260,10 @@
         "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\872efa4e66e777809b186b40760000f7\\res\\layout\\design_bottom_navigation_item.xml"
     },
     {
+        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sentence_check.xml.flat",
+        "source": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\src\\main\\res\\layout\\activity_sentence_check.xml"
+    },
+    {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
@@ -1428,6 +1440,10 @@
         "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\drawable-v21\\abc_list_divider_material.xml"
     },
     {
+        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\layout_cardview_sentence.xml.flat",
+        "source": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\src\\main\\res\\layout\\cardview_sentence.xml"
+    },
+    {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
@@ -1470,6 +1486,10 @@
     {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light.xml.flat",
         "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\f5509a2c0f5fcd63147eeed467b1578c\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sentence.xml.flat",
+        "source": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\src\\main\\res\\layout\\activity_sentence.xml"
     },
     {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
@@ -2056,12 +2076,12 @@
         "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_light.xml.flat",
-        "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\color\\abc_hint_foreground_material_light.xml"
-    },
-    {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_light.xml.flat",
+        "source": "C:\\Users\\Guanghui Li\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e6dcd5d43ddc81e0cccf63465825924d\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
         "merged": "D:\\Android Studio\\AndroidStudioProjects\\Hobby\\EngHelper\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",

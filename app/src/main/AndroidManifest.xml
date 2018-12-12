@@ -17,7 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Vocabulary.VocabularyActivity" />
-        <activity android:name=".Vocabulary.VocabularyDetailActivity"></activity>
+        <activity android:name=".Vocabulary.VocabularyDetailActivity" />
+        <activity android:name=".Sentence.SentenceActivity" />
+        <activity android:name=".Sentence.SentenceDetailActivity" />
+        <activity android:name=".Sentence.SentenceCheckActivity"></activity>
     </application>
 
 </manifest>

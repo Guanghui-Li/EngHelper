@@ -1,6 +1,5 @@
 package com.example.guanghuili.enghelper.Vocabulary;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
@@ -12,16 +11,13 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import com.example.guanghuili.enghelper.Guess;
 import com.example.guanghuili.enghelper.R;
-import java.util.ArrayList;
+
 import java.util.List;
 
 public class vocabCommentRecyclerViewAdapter extends RecyclerView.Adapter<vocabCommentRecyclerViewAdapter.ViewHolder>{
-    private AlertDialog alertDialog;
-    private AlertDialog.Builder dialogBuilder;
-
     private Context context;
-    private LayoutInflater inflater;
     private List<Guess>guessList;
 
 
@@ -34,7 +30,7 @@ public class vocabCommentRecyclerViewAdapter extends RecyclerView.Adapter<vocabC
     @Override
     public vocabCommentRecyclerViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cardview_vocab_comment, viewGroup, false);
-        return new ViewHolder(view, context);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -44,6 +40,7 @@ public class vocabCommentRecyclerViewAdapter extends RecyclerView.Adapter<vocabC
             viewHolder.tvUserDefinition.setText(guess.getGuess());
             viewHolder.tvUsername.setText(guess.getAppUser().getUsername());
             viewHolder.tvDate.setText(guess.getDateCreated());
+
         }
     }
 
@@ -52,24 +49,16 @@ public class vocabCommentRecyclerViewAdapter extends RecyclerView.Adapter<vocabC
         return guessList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView tvUserDefinition;
         public TextView tvUsername;
         public TextView tvDate;
 
-        public ViewHolder(View view, Context ctx) {
+        public ViewHolder(View view) {
             super(view);
-            view.setOnClickListener(this);
-
-            context = ctx;
             tvUserDefinition = view.findViewById(R.id.tvUserDefinitionID);
             tvUsername = view.findViewById(R.id.tvUsernameID);
             tvDate = view.findViewById(R.id.tvDateID);
-
-        }
-
-        @Override
-        public void onClick(View view) {
 
         }
     }
